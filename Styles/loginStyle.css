@@ -1,0 +1,200 @@
+.container-fluid{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+}
+body{
+    background-color:#8d5ec7;
+}
+#googleImg{
+    margin-bottom: 4px;
+}
+#page{
+    width: 100%;
+}
+#entireRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page_bg_row{
+    background-color: #EEEDED;
+    box-shadow: rgba(99, 99, 99, 0.2) 5px 0px 5px 0px;
+    border-radius: 5px;
+    padding: 20px 0px;
+    width: 100%;
+    margin: 0px;
+}
+#login_bg{
+    padding: 0px;
+}
+#login_col{
+    background-color: #FFFFFF;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius:10px;
+    padding:20px;
+}
+#logintitle{
+    display: flex;
+    align-items: start;
+}
+#loginH5{
+    color: #121132;
+    font-weight:700;
+}
+#login_row_8, #login_row_9, #login_row_10{
+    padding-bottom: 15px;
+}
+#checkBoxDiv{
+    display: flex;
+    align-items: center;
+}
+#login_row_2{
+    font-size: 16px;
+    display: flex;
+    align-items: start;
+}
+#signUpText{
+    color:#7a1cc7;
+}
+#acc, #passworddiv{
+    padding-right: 0px;
+}
+#emailInput, #passwordInput{
+    padding:12px;
+}
+#forgotPasswordLink{
+    padding-bottom: 5px;
+}
+#signup, #forgotPassworddiv, #loginWith{
+    padding: 0px;
+}
+#signup, #forgotPassworddiv{
+    padding-right: 12px !important;
+}
+#forgotPassworddiv{
+    display: flex;
+    justify-content: end;
+}
+#login_row_3{
+    display: flex;
+    align-items: start;
+}
+#emailH6{
+    margin-bottom: 0px;
+}
+#loginWith{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+#passworddiv{
+    display: flex;
+    align-items: center;
+}
+#passwordH6{
+    margin-bottom: 0px;
+}
+#forgotPasswordLink{
+    color:#7a1cc7;
+}
+#errorMsg, #emailErrMsg{
+    color: red;
+    font-size: 10px;
+    margin-left: 5px;
+}
+#emailErrDiv, #login_row_7{
+    visibility: hidden;
+}
+#checkBoxInput{
+    height:15px;
+    width:15px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+#loginButton{
+    background-color:#7d44f5;
+    width: 100%;
+}
+#googleButton, #fbButton{
+    width: 100%;
+}
+#googleImg{
+    width: 17px;
+    height: 17px;
+}
+#googleSpan, #fbI, #googleImg, #fbButton i{
+    margin-right: 5px;
+}
+#googleTextSpan{
+    margin-top: 2px;
+}
+#rightCol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rightImg{
+    height:100%;
+    width:100%;
+}
+#popupMsg{
+    font-size: 15px;
+}
+#popupDiv{
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 40%;
+    height: 10%;
+    width: 22%;
+    border-radius: 8px;
+    align-items: center;
+}
+#popupCloseDiv{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 30%;
+    width: 7%;
+    background-color: #EEEDED;
+    border-radius: 35px;
+    display: grid;
+    place-content: center;
+    border: 1px solid grey;
+}
+#popupClose{
+    color: black;
+}
+#login_row_3, #login_row_5{
+    padding-bottom: 5px;
+}
+#login_row_10{
+    display: flex;
+    align-items: center;
+}
+#login_row_6{
+    position: relative;
+}
+#eyeIconDiv{
+    display: grid;
+    place-items: center;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: #fff;
+    top: 10px;
+    right: 20px;
+}
+#eyeIcon{
+    cursor: pointer;
+}
+@media (max-width: 767px){
+    #rightCol{
+        display: none;
+    }
+}

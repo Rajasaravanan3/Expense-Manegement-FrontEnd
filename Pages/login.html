@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        
+        <!-- cdn links -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="../Styles/loginStyle.css">
+
+
+    </head>
+    <body>
+        <div class="container-fluid" id="container">
+            <div id="popupDiv" class="popupDiv">
+                <h5 id="popupMsg" class="popupMsg"></h5>
+                <div id="popupCloseDiv">
+                    <i id="popupClose" class="fa-solid fa-xmark fa-lg"></i>
+                </div>
+            </div>
+            <div id="entireRow" class="row">
+                <div id="empty_1" class="col-md-0 col-lg-1">
+
+                </div>
+                <div id="login_bg" class="col-12 col-lg-10">
+                    <div id="page_bg_row" class="row">
+                        <div id="empty_2" class="col-1"></div>
+                        <div id="page_bg" class="col-10">
+                            <div id="row" class="row">
+                                <div id="login_col" class="col-md-5 col-sm-12">
+                                    <div id="login_row_1" class="row">
+                                        <div id="logintitle" class="col-12">
+                                            <h5 id="loginH5" class="col-12">Login</h5>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_2" class="row">
+                                        <div id="acc" class="col-9">
+                                            <p id="haveAcc">Doesn't have an account yet?</p>
+                                        </div>
+                                        <div id="signup" class="col-3">
+                                            <a id="signUpText" href="#" onclick="signInOrSignUp()">Sign Up</a>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_3" class="row">
+                                        <div id="emaildiv" class="col-12">
+                                            <label id="emaillabel">
+                                                <h6 id="emailH6">Email Address</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_4" class="row">
+                                        <div id="emailInputdiv" class="col-12">
+                                            <input id="emailInput" class="form-control" type="text" placeholder="you@example.com">
+                                        </div>
+                                    </div>
+                                    <div id="emailErrDiv">
+                                        <small id="emailErrMsg">err</small>
+                                    </div>
+                                    <div id="login_row_5" class="row">
+                                        <div id="passworddiv" class="col-6">
+                                            <label id="passwordLabel">
+                                                <h6 id="passwordH6">Password</h6>
+                                            </label>
+                                        </div>
+                                        <div id="forgotPassworddiv" class="col-6">
+                                            <a id="forgotPasswordLink" href="#">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_6" class="row">
+                                        <div id="eyeIconDiv">
+                                            <i id="eyeIcon" class="fa-regular fa-eye-slash" onclick="viewOrHide()">
+                                            </i>
+                                        </div>
+                                        <div id="passwordInputDiv" class="col-12">
+                                            <input id="passwordInput" class="form-control" onfocus="suggestion()" onblur="removesuggestion()" type="password" placeholder="Enter 6 character or more">
+                                        </div>
+                                    </div>
+                                    <div id="login_row_7">
+                                        <small id="errorMsg">err</small>
+                                    </div>
+                                    <div id="login_row_8" class="row">
+                                        <div id="checkBoxDiv" class="col-12">
+                                            <input id="checkBoxInput" type="checkbox">
+                                            <label>Remember Me</label>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_9" class="row">
+                                        <div id="loginButtonDiv" class="col-12">
+                                            <button id="loginButton" class="btn btn-primary" onclick="check()">LOGIN</button>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_10" class="row">
+                                        <div id="line_1_div" class="col-4">
+                                            <hr>
+                                        </div>
+                                        <div id="loginWith" class="col-4">or login with</div>
+                                        <div id="line_2_div" class="col-4">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div id="login_row_11" class="row">
+                                        <div id="googleDiv" class="col-6">
+                                            <button id="googleButton" class="btn btn-outline-danger" type="button">
+                                                <span>
+                                                    <img src="../images/1534129544.svg" alt="googleIcon" id="googleImg">
+                                                </span>
+                                                <span>Google</span>
+                                            </button>
+                                        </div>
+                                        <div id="fbDiv" class="col-6">
+                                            <button id="fbButton" class="btn btn-outline-primary" type="button">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                                Facebook
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="rightCol" class="col-7 col-sm-0">
+                                    <div id="rightRow" class="row">
+                                        <div id="empty_3" class="col-1">
+
+                                        </div>
+                                        <div id="rightImgDiv" class="col-10">
+                                            <img id="rightImg" src="../images/undraw_secure_login_pdn4.svg" alt="workplace">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="empty_end" class="col-md-0 col-lg-1">
+
+                </div>
+            </div>
+        </div>
+        <script src="../Scripts/loginValidation.js"></script>
+</body>
+</html>
