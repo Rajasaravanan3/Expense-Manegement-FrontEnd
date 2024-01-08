@@ -63,9 +63,6 @@ body{
 #acc, #passworddiv{
     padding-right: 0px;
 }
-#emailInput, #passwordInput{
-    padding:12px;
-}
 #forgotPasswordLink{
     padding-bottom: 5px;
 }
@@ -172,6 +169,12 @@ body{
 #login_row_3, #login_row_5{
     padding-bottom: 5px;
 }
+#username_row, #fullname_row {
+    padding-bottom: 10px;
+}
+#username_row, #fullname_row, #username_text_row, #fullname_text_row {
+    display : none;
+}
 #login_row_10{
     display: flex;
     align-items: center;
@@ -187,7 +190,7 @@ body{
     width: 30px;
     position: absolute;
     background-color: #fff;
-    top: 10px;
+    top: 5px;
     right: 20px;
 }
 #eyeIcon{

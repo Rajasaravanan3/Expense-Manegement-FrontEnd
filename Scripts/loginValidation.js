@@ -11,15 +11,16 @@ let checkboxval = false;
 let emailErrorDivision = document.getElementById("emailErrDiv");
 let passwordErrorDivision = document.getElementById("login_row_7");
 let errorText  = document.getElementById("errorMsg");
+let fullnameTextRow = document.getElementById("fullname_text_row");
+let fullnameInputRow = document.getElementById("fullname_row");
+let usernameTextRow = document.getElementById("username_text_row");
+let usernameInputRow = document.getElementById("username_row");
 
 emailEle.addEventListener('change',(event)=>{
     emailval = event.target.value;
 });
 pwdEle.addEventListener('change',(event)=>{
     pwdval = event.target.value;
-});
-checkboxEle.addEventListener("click",(event)=>{
-    checkboxval=event.target.checked;
 });
 emailEle.addEventListener("keydown", (event) =>{
     emailErrorDivision.style.visibility="hidden";
@@ -67,12 +68,12 @@ function viewOrHide(){
 
 
 function validate(){
-    let validEmail = validUserName(emailval);  
+    let validEmail = validUserName(emailval);
     let validPwd =true;
-    if(button.innerText=="REGISTER"){ 
+    if(button.innerText=="REGISTER"){
         validPwd = validPassword(pwdval);
     }
-    if(button.innerText=="LOGIN"){ 
+    if(button.innerText=="LOGIN"){
         validPwd = validLoginPass(pwdval);
     }
     if(validEmail && validPwd){
@@ -190,20 +191,22 @@ function toRegister(){
     setToDefault();
     haveAccount.innerText = "Already have an account?";
     signUpOrSignIn.innerText="Sign In";
-    orLoginWithTextRow.style.display="none";
-    loginWithButtonsRow.style.display="none";
-    forgotPwd.style.display="none";
+    fullnameTextRow.style.display = "flex";
+    fullnameInputRow.style.display = "flex";
+    usernameTextRow.style.display = "flex";
+    usernameInputRow.style.display = "flex";
 }
 
 function toLogin(){
     haveAccount.innerText = "Doesn't have an account yet?";
     signUpOrSignIn.innerText="Sign Up";
-    orLoginWithTextRow.style.display="flex";
-    loginWithButtonsRow.style.display="flex";
-    forgotPwd.style.display="inline";
     setToDefault();
     button.innerText="LOGIN";
     title.innerText = "Login";
+    fullnameTextRow.style.display = "none";
+    fullnameInputRow.style.display = "none";
+    usernameTextRow.style.display = "none";
+    usernameInputRow.style.display = "none";
 }
 
 function setToDefault(){
@@ -246,3 +249,6 @@ function success(successMessage){
 function clear() {
     element.style.display="none";
 };
+
+
+

@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Management</title>
+    <link rel="stylesheet" href="../Styles/expenseManagemetStyle.css">
 </head>
 <body>
+    <div id="containerDiv" class="container-fluid">
+        <div id="headerDiv">
+
+            <div id="header_right">
+                <div id="username_text_div">
+                    <h4 id="username_text">Username</h4>
+                </div>
+                <div id="profile_div">
+                    <img id="profile_image" src="../icons/user.svg" alt="user">
+                </div>
+            </div>
+            <div id="userDetails">
+                <div id="username_div">
+                    <label >Username </label>
+                    <input id="username_input" type="text">
+                </div>
+                <div id="fullname_div">
+                    <label >Full Name </label>
+                    <input id="fullname_input" type="text">
+                </div>
+                <div id="email_div">
+                    <label >Email </label>
+                    <input id="email_input" type="text">
+                </div>
+                <div id="password_div">
+                    <label >Password </label>
+                    <input id="password_input" type="password">
+                </div>
+                <div id="userSubmit_div">
+                    <button id="user_submit">Update</button>
+                </div>
+            </div>
+
+        </div>
         
+        <div id="bodyDiv">
+            <div id = "responseDiv">
+                
+            </div>
+            <div>
+                <button id="getUserId" onclick="fetchUserId()">getUserId</button>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/expense.js"></script>
 </body>
 </html>
